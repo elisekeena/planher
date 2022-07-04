@@ -1,0 +1,3 @@
+class QuoteOfTheDaysController < ApplicationController
+
+end
