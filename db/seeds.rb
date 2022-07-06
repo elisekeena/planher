@@ -30,10 +30,10 @@ interview = MyEvent.create(name: "Job Interview", datetime:DateTime.new(2022, 8,
 
 puts "Creating my to do lists..."
 
-paytuition = ToDoList.create(task: "Pay Tuition Fee", status: "not done", user_id: elise.id)
-appointment = ToDoList.create(task: " Make Dental Appointment", status: "done", user_id: elise.id)
-project = ToDoList.create(task: "Finish Final Project", status: "in progress", user_id: elise.id)
-webiste = ToDoList.create(task: "Finish Webiste", status: "in progress", user_id: elise.id)
+paytuition = ToDoList.create(task: "Pay Tuition Fee", note: "", status: "not done", user_id: elise.id)
+appointment = ToDoList.create(task: " Make Dental Appointment", note: "at 303-456-7898 by 2pm", status: "done", user_id: elise.id)
+project = ToDoList.create(task: "Finish Final Project", note:"get it done by 6pm", status: "in progress", user_id: elise.id)
+webiste = ToDoList.create(task: "Finish Website", note:"get it done by 7pm today", status: "in progress", user_id: elise.id)
 
 puts "Creating my expenses..."
 

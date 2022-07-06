@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2022_07_03_223751) do
   create_table "to_do_lists", force: :cascade do |t|
     t.string "task"
     t.string "status"
+    t.string "note"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
