@@ -22,10 +22,11 @@ ActiveRecord::Schema.define(version: 2022_07_03_223751) do
   end
 
   create_table "my_events", force: :cascade do |t|
-    t.string "name"
-    t.datetime "datetime"
-    t.string "location"
+    t.string "title"
     t.integer "user_id"
+    t.string "start"
+    t.string "end"
+    t.boolean "all_day"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

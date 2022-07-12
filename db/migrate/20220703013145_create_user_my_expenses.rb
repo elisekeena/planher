@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateUserMyExpenses < ActiveRecord::Migration[6.1]
   def change
     create_table :user_my_expenses do |t|

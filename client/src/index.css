@@ -11,12 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+/* ========================= TO DO PAGE ====================================== */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
 
 :root{
-  --color: #682960;
+  --color: #309397;
   --width: 700px;
+}
+
+.bodylanding {
+  margin: 0;
+  font-family: 'Mulish', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "BIZ UDMincho", serif;
 }
 
 body {
@@ -24,7 +34,13 @@ body {
   font-family: 'Mulish', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(241, 241, 241);
+  /* background-color: rgb(184, 210, 161); */
+  /* background-color:#FFF9EC!important;  */
+  background-image: url("https://img.freepik.com/premium-photo/eucalyptus-leaves-white-background-flat-lay-top-view-copy-space_102752-779.jpg?w=2000");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "BIZ UDMincho", serif;
+  background-color: transparent;
 }
 
 code {
@@ -72,7 +88,7 @@ code {
   position: relative;
   margin: 10px auto;
   max-width: var(--width);
-  background: #fff;
+  background: whitesmoke;
   border-radius: 10px;
   padding: 5px 10px;
   box-shadow:
@@ -97,7 +113,7 @@ code {
   position: relative;
   margin: 30px auto;
   max-width: var(--width);
-  background: #fff;
+  background: #FFF9EC;
   border-radius: 10px;
   padding: 5px 10px;
   box-shadow:
@@ -162,6 +178,9 @@ code {
   padding: 5px 15px;
   border-radius: 10px;
   cursor: pointer;
+}
+.add-task button:hover {
+  transform: scale(1.05);
 }
 
 .tasks-list .task{
@@ -283,10 +302,6 @@ code {
   color: rgb(252, 255, 66);
 }
 
-.tasks-list .task .completed label .workingonit{
-  color: rgb(66, 233, 255);
-}
-
 .tasks-list .task .completed label .done{
   color: rgb(69, 240, 35);
 }
@@ -297,11 +312,527 @@ code {
 }
 
 .delete-btn{
-  background: rgb(211, 76, 76) !important;
+  background: #E46472 !important;
+}
+.delete-btn:hover {
+  transform: scale(1.05);
 }
 
 .center-block {
   display: block;
   margin-right: auto;
   margin-left: auto;
+}
+
+
+  /* ========================= CALENDAR ====================================== */
+
+.demo-app {
+  display: flex;
+  min-height: 100%;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.demo-app-sidebar {
+  width: 300px;
+  line-height: 1.5;
+  background: #FFF9EC;
+  border-right: 1px solid #d3e2e8;
+}
+
+.demo-app-sidebar-section {
+  padding: 2em;
+}
+
+.demo-app-main {
+  flex-grow: 1;
+  padding: 3em;
+}
+
+.fc { /* the calendar root */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.fc .fc-daygrid-day-frame {
+  position: relative;
+  min-height: 100%;
+  /* color:#E46472; */
+}
+
+/* ========================= BURGER STYLE MENU ====================================== */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #E46472;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #e3edd9;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  overflow: hidden !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #d9e8ca;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #309397;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/*===== Images=====*/
+
+.cardImage {
+  max-width: 20%;
+  max-height: 20%;
+  position: relative;
+
+}
+
+
+/*======= loginPage===*/
+.loginPage {
+  height: 33rem;
+  width: 100%;
+  outline-width: 10px;
+  border-radius: 1rem;
+  background-color: #309397(255, 255, 255, 0.282);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 6rem; 
+  font-style: "ProximaNova";
+  margin-top: 100px;
+}
+#testpadding{
+margin-top: 200px;
+z-index:-1;
+position:relative
+}
+form {
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  grid-gap: 10px;
+  margin-top: 100px;
+  max-width: var(--width);
+  position: relative;
+  margin: 30px auto;
+  padding: 90px;
+  background-color: #FFF9EC;
+  border-radius: 10px;
+  box-shadow: 0 32px 64px rgba(0,0,0,0.2);
+ 
+}
+#form-login {
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  grid-gap: 10px;
+  margin-top: 100px;
+  max-width: var(--width);
+  position: relative;
+  /* margin: 30px auto; */
+  padding: 90px;
+  background-color: #FFF9EC;
+  border-radius: 10px;
+  box-shadow: 0 32px 64px rgba(0,0,0,0.2);
+ 
+}
+/* fieldset {
+  margin: 0;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+} */
+
+
+.loginbutton {
+  margin-top: 2rem;
+  outline: none;
+  border: none;
+  background-color: #309397;
+  color: white;
+  cursor: pointer;
+  /* font-family: "Georgia" */
+  font-style: "Georgia";
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  width: 10rem
+  
+}
+
+.loginbutton:hover {
+  transform: scale(1.05);
+}
+li {
+  display: grid;
+  align-items: center;
+  margin: 10px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+/*======= myEventPage===*/
+/* body {
+  margin: 40px 10px;
+  padding: 0;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 16px;
+} */
+
+ #calendar {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #E46472 !important;
+  border-color: #000000!important;
+  border-width: 22px;
+}
+
+.btn-primary-active {
+  border-color: #00ccff;
+}
+
+.demo-app-sidebar {
+  width: 300px;
+  line-height: 1.5;
+  background:  #e3edd9 !important;
+  border-right: 1px solid #d3e2e8;
+}
+
+.table {
+  display:table;
+  border-collapse: separate;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: #FFD700  !important;
+  box-sizing: border-box;
+}
+
+.fc-scrollgrid{
+  border: 1px solid #FFD700 !important;
+  border-width: 5px!important ;
+  /* border-style: solid !important; */
+  border-radius: 10px;
+}
+
+/* ############## CALENDAR POP UP ######### */
+.review-modal {
+  background:#FFF9EC; 
+    margin: 0 auto;
+    width:500px; 
+    position:relative; 
+    z-index:41;
+    top: 25%;
+    padding:25px; 
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+    border-radius: 20px;
+    outline: #309397 3px solid;
+}
+/* ***** HomePage animation *********
+#home {
+  clip-path: url(#cache);
+}
+
+#red {
+  fill: none;
+  opacity: 0.15;
+  stroke: #CE1B5F;
+  stroke-width: 12;
+  stroke-miterlimit:10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; 
+}
+
+#blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 12;
+  stroke-miterlimit:10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#light-blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 6;
+  stroke-miterlimit:10;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 800;
+  animation: draw 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;    
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+ }
+    }
+
+@keyframes show {
+  0% {
+    opacity: 0.15;
+ }
+  50% {
+    opacity: 0.2;
+ }
+  100% {
+    opacity: 0.15;
+ }
+    } */
+
+/**** header ***/
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+
+.headerStyle {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 75px;
+  height: 300px;
+  font-family: cursive
+}
+
+
+/* ########## MY EXPENSE ############### */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/* :root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+} */
+
+ .container {
+  margin: 10px auto;
+  width: 350px;
+}
+
+.h1expense {
+  letter-spacing: 1px;
+  margin: 0;
+  color: #309397;
+  font-size: 38px;
+  font-weight: 300;
+
+}
+
+.h3expense {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+.h4expense {
+  margin: 0;
+  text-transform: uppercase;
+  /* border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  border:#309397; */
+  margin: 0 auto;
+}
+
+.inc-exp-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #FFD700;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 50%;
+  margin:0 auto
+}
+
+.btnExpense {
+  cursor: pointer;
+  background-color: #309397;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+}
+
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 0px auto;
+  width:65%;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+select {
+  margin-left: .5rem;
+}
+
+.select{
+  background-color:indigo;
+  color:#fff;
+}
+
+.delete-expense-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 5px;
+  border-color: #dedede;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.delete-expense-btn:hover{
+transform: scale(1.05);
+}
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 300px;
+  }
 }

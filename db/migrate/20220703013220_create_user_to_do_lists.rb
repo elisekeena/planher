@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateUserToDoLists < ActiveRecord::Migration[6.1]
   def change
     create_table :user_to_do_lists do |t|
