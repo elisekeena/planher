@@ -13,18 +13,19 @@ export default function HomePage() {
          setMyQuotes(data[0]);
       })
   }, []);
-  
+ 
   return (<>
     <main style={{ padding: "1rem 0" }}>
-      <div id="home" className='bodylanding'>
+      <div id="home" className='bodybackground'>
         <h1> Hello this is quote of the day:</h1>
         <br/>
         <h2>{quotes.q}</h2>
           <h5>{quotes.a}</h5>
-          <img src={"https://i.pinimg.com/originals/fb/bf/bf/fbbfbfc3742a689333b79428a954aad3.gif"} />
+          {/* <img src={"https://i.pinimg.com/originals/fb/bf/bf/fbbfbfc3742a689333b79428a954aad3.gif"} /> */}
           </div>
     </main>
     </>
+    
     
   );
 

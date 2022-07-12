@@ -4,6 +4,8 @@ import { FaHome } from 'react-icons/fa';
 import { BiHomeHeart } from 'react-icons/bi';
 import { VscChecklist } from 'react-icons/vsc';
 import { BiCalendarHeart } from 'react-icons/bi';
+import { RiMoneyDollarBoxLine } from 'react-icons/ri';
+
 
 export default function Header({ onLogout, user }) {
 
@@ -42,18 +44,17 @@ export default function Header({ onLogout, user }) {
         {/* <a onClick={ showSettings } className="menu-item--small" href="">Settings</a> */}
         {user ?<>
         <a style={{textDecoration: 'none'}}  id="todolist" className="bm-item-list" href="/toDoList">
-          <h1>< VscChecklist />    <span>To Do List</span></h1>
+          <h1>< VscChecklist />    <span>To Do</span></h1>
         </a>
         <br></br>
         <a style={{textDecoration: 'none'}} id="myevents" className="bm-item-list" href={`/MyEvents?userId=${user.id}`}>
-        <h1>< BiCalendarHeart />   <span>My Events</span></h1>
+        <h1>< BiCalendarHeart />   <span>Events</span></h1>
         </a>
         <br></br>
         <a style={{textDecoration: 'none'}} id="myExpenses" className="bm-item-list" href={`/myExpenses`}>
-        <h1>< BiCalendarHeart />   <span>My Expense</span></h1>
+        <h1>< RiMoneyDollarBoxLine />   <span>Expenses</span></h1>
         </a>
         <br></br>
-
         <a id="logout" className="menu-item" href="/login" onClick={handleLogout}>Logout</a>
         {" "}</> :
          <a id="login" className="menu-item" href="/login">Login</a>}

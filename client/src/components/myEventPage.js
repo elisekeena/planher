@@ -144,11 +144,11 @@ export default class MyEventPage extends React.Component {
             onChange={event => this.setState({ popUpAnswer: event.target.value })}
           />
           <br></br>
-          <button onClick={this.handleAddEvent} >
+          <button className="popUpButtonYes" onClick={this.handleAddEvent} >
             Submit
           </button>
           <br></br>
-          <button onClick={event => this.setState({ popUp: false })} >
+          <button className="popUpButtonNo" onClick={event => this.setState({ popUp: false })} >
             Cancel
           </button>
         </div>
@@ -166,11 +166,11 @@ export default class MyEventPage extends React.Component {
       return (
         <div className="review-modal" >Are you sure you want to delete the event {deleteInfo.title} ?
         <br></br>
-          <button onClick={event => this.handleDelete(deleteInfo)} >
+          <button className="popUpButtonYes" onClick={event => this.handleDelete(deleteInfo)} >
             YES
           </button>
           <br></br>
-          <button onClick={event => this.setState({ deletePopUp: false })} >
+          <button className="popUpButtonNo" onClick={event => this.setState({ deletePopUp: false })} >
             NO
           </button>
         </div>

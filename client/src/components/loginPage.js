@@ -68,7 +68,13 @@ export default function LoginPage() {
 
   return (
     <main style={{ padding: "1rem 0" }}>
-      
+      {/* <div className='buttons'>
+      <button style={{ backgroundColor: '#c3c4d3' }} onClick={() => {
+          navigate("/signup");
+        }}>Sign Up</button>
+      </div>
+
+       */}
       <div className="loginPage">
       <form id="form-login" onSubmit={handleSubmit}>
       <h2>Welcome Back!</h2>

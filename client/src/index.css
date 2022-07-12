@@ -19,7 +19,7 @@ code {
   --width: 700px;
 }
 
-.bodylanding {
+/* .bodylanding {
   margin: 0;
   font-family: 'Mulish', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,7 +27,19 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "BIZ UDMincho", serif;
+} */
+.bodybackground {
+  margin: 0;
+  font-family: 'Mulish', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://media.istockphoto.com/photos/marble-home-office-desk-table-with-clipboard-mockup-glasses-office-picture-id1300098084?b=1&k=20&m=1300098084&s=170667a&w=0&h=WElfy6ZvE9dMnZPCAPkU9Mn-wBRQS689VgmHBOLygSU=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "BIZ UDMincho", serif;
+  background-color: transparent;
 }
+
 
 body {
   margin: 0;
@@ -36,7 +48,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* background-color: rgb(184, 210, 161); */
   /* background-color:#FFF9EC!important;  */
-  background-image: url("https://img.freepik.com/premium-photo/eucalyptus-leaves-white-background-flat-lay-top-view-copy-space_102752-779.jpg?w=2000");
+  /* background-image: url("https://img.freepik.com/premium-photo/eucalyptus-leaves-white-background-flat-lay-top-view-copy-space_102752-779.jpg?w=2000"); */
+  background-image: url("https://www.designerblogs.com/wp-content/uploads/2020/09/planner-page-header-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "BIZ UDMincho", serif;
@@ -88,7 +101,7 @@ code {
   position: relative;
   margin: 10px auto;
   max-width: var(--width);
-  background: whitesmoke;
+  background: #FFF9EC;
   border-radius: 10px;
   padding: 5px 10px;
   box-shadow:
@@ -137,7 +150,7 @@ code {
 .add-task h1{
   margin: 10px 15px;
   padding-left: 10px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .add-task h1 svg{
@@ -231,7 +244,7 @@ code {
 .tasks-list h1{
   margin: 10px 15px;
   padding-left: 10px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .tasks-list h1 svg{
@@ -349,7 +362,6 @@ code {
   flex-grow: 1;
   padding: 3em;
 }
-
 .fc { /* the calendar root */
   max-width: 1100px;
   margin: 0 auto;
@@ -358,6 +370,87 @@ code {
   position: relative;
   min-height: 100%;
   /* color:#E46472; */
+}
+.fc .fc-scrollgrid-liquid {
+  height: 100%;
+  background: #FFF9EC;
+  opacity:85%;;
+}
+.fc-h-event .fc-event-main {
+  background: #E46472;
+  color: var(--fc-event-text-color, #fff);
+}
+/*======= myEventPage===*/
+
+#calendar {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #E46472 !important;
+  border-color: #000000!important;
+  border-width: 22px;
+}
+
+.btn-primary-active {
+  border-color: #e3edd9 
+}
+
+.demo-app-sidebar {
+  width: 300px;
+  line-height: 1.5;
+  background:  #e3edd9 !important;
+  border-right: 1px solid #d3e2e8;
+}
+
+.table {
+  display:table;
+  border-collapse: separate;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: #FFD700  !important;
+  box-sizing: border-box;
+}
+
+.fc-scrollgrid{
+  border: 1px solid #FFD700 !important;
+  border-width: 5px!important ;
+  /* border-style: solid !important; */
+  border-radius: 10px;
+}
+
+/* ############## CALENDAR POP UP ######### */
+.review-modal {
+  background:#FFF9EC; 
+    margin: 0 auto;
+    width:500px; 
+    position:relative; 
+    z-index:41;
+    top: 25%;
+    padding:25px; 
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+    border-radius: 20px;
+    outline: #309397 3px solid;
+}
+.popUpButtonNo{
+  color: #fff;
+  background-color: #E46472 !important;
+  border-color: #000000!important;
+  border-width: 1.5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.popUpButtonYes{
+  color: #fff;
+  background-color: #309397 !important;
+  border-color: #000000!important;
+  border-width: 1.5px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 /* ========================= BURGER STYLE MENU ====================================== */
@@ -526,128 +619,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-/*======= myEventPage===*/
-/* body {
-  margin: 40px 10px;
-  padding: 0;
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-  font-size: 16px;
-} */
-
- #calendar {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #E46472 !important;
-  border-color: #000000!important;
-  border-width: 22px;
-}
-
-.btn-primary-active {
-  border-color: #00ccff;
-}
-
-.demo-app-sidebar {
-  width: 300px;
-  line-height: 1.5;
-  background:  #e3edd9 !important;
-  border-right: 1px solid #d3e2e8;
-}
-
-.table {
-  display:table;
-  border-collapse: separate;
-  text-indent: initial;
-  border-spacing: 2px;
-  border-color: #FFD700  !important;
-  box-sizing: border-box;
-}
-
-.fc-scrollgrid{
-  border: 1px solid #FFD700 !important;
-  border-width: 5px!important ;
-  /* border-style: solid !important; */
-  border-radius: 10px;
-}
-
-/* ############## CALENDAR POP UP ######### */
-.review-modal {
-  background:#FFF9EC; 
-    margin: 0 auto;
-    width:500px; 
-    position:relative; 
-    z-index:41;
-    top: 25%;
-    padding:25px; 
-    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
-    -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
-    box-shadow:0 0 10px rgba(0,0,0,0.4);
-    border-radius: 20px;
-    outline: #309397 3px solid;
-}
-/* ***** HomePage animation *********
-#home {
-  clip-path: url(#cache);
-}
-
-#red {
-  fill: none;
-  opacity: 0.15;
-  stroke: #CE1B5F;
-  stroke-width: 12;
-  stroke-miterlimit:10;
-  animation: show 4s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out; 
-}
-
-#blue {
-  fill: none;
-  opacity: 0.15;
-  stroke: #06A1C4;
-  stroke-width: 12;
-  stroke-miterlimit:10;
-  animation: show 4s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-
-#light-blue {
-  fill: none;
-  opacity: 0.15;
-  stroke: #06A1C4;
-  stroke-width: 6;
-  stroke-miterlimit:10;
-  stroke-dasharray: 200;
-  stroke-dashoffset: 800;
-  animation: draw 4s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;    
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
- }
-    }
-
-@keyframes show {
-  0% {
-    opacity: 0.15;
- }
-  50% {
-    opacity: 0.2;
- }
-  100% {
-    opacity: 0.15;
- }
-    } */
 
 /**** header ***/
 @keyframes animatedBackground {
@@ -664,7 +635,8 @@ ul {
   padding: 1rem 0;
   font-size: 75px;
   height: 300px;
-  font-family: cursive
+  font-family: cursive;
+  color: black
 }
 
 
@@ -714,7 +686,13 @@ ul {
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  max-width: var(--width);
+  position: relative;
+  margin: 30px auto;
+  padding: 50px;
+  border: 1px solid #309397;
+  border-radius: 5px;
+  border-width: 5px;
 }
 
 .inc-exp-container > div {
@@ -811,9 +789,7 @@ select {
 
 .delete-expense-btn {
   cursor: pointer;
-  background-color: #e74c3c;
   border: 5px;
-  border-color: #dedede;
   font-size: 20px;
   line-height: 20px;
   padding: 2px 5px;
@@ -823,6 +799,12 @@ select {
   transform: translate(-100%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease;
+  color: #fff;
+  background-color: #E46472 !important;
+  border-color: #000000!important;
+  border-width: 1.5px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 .delete-expense-btn:hover{
 transform: scale(1.05);

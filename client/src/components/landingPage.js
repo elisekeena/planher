@@ -11,7 +11,8 @@ export default function LandingPage(user) {
     // <main style={{ padding: "1rem 0" }}>
       <main className="headerStyle">
         <div style={{ 
-      backgroundImage: `url("https://www.designerblogs.com/wp-content/uploads/2020/09/planner-page-header-background.jpg")`,
+      // backgroundImage: `url("https://www.designerblogs.com/wp-content/uploads/2020/09/planner-page-header-background.jpg")`,
+      bacgroundImage: 'url("https://i.pinimg.com/736x/bc/3e/e0/bc3ee0873d8a0eefda0c0135adf51004.jpg")',
       textAlign: "center",
       backgroundSize: "cover",
       // backgroundSize:"800px auto",
