@@ -9,6 +9,8 @@ import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { useParams } from 'react-router-dom';
+
 
 let eventGuid = 0
 let todayStr = new Date().toISOString().replace(/T.*$/, '') // YYYY-MM-DD of today
@@ -31,7 +33,10 @@ export const INITIAL_EVENTS = [
 export function createEventId() {
   return String(eventGuid++)
 }
+
+
 export default class MyEventPage extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -55,6 +60,7 @@ export default class MyEventPage extends React.Component {
   //   }
 
     render() {
+      // console.log(this.props.match.params)
       return (
         <div className='demo-app'>
           {this.renderSidebar()}
@@ -75,7 +81,7 @@ export default class MyEventPage extends React.Component {
               selectMirror={true}
               dayMaxEvents={true}
               weekends={this.state.weekendsVisible}
-              events= {'my_events/'}
+              events= {'/my_events/'}
               select={this.handleDateSelect}
               eventContent={renderEventContent} // custom render function
               eventClick={this.handleEventClick}

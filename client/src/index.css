@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,34 +10,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 /* ========================= TO DO PAGE ====================================== */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
 
 :root{
   --color: #309397;
   --width: 700px;
-}
-
-/* .bodylanding {
-  margin: 0;
-  font-family: 'Mulish', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "BIZ UDMincho", serif;
-} */
-.bodybackground {
-  margin: 0;
-  font-family: 'Mulish', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url("https://media.istockphoto.com/photos/marble-home-office-desk-table-with-clipboard-mockup-glasses-office-picture-id1300098084?b=1&k=20&m=1300098084&s=170667a&w=0&h=WElfy6ZvE9dMnZPCAPkU9Mn-wBRQS689VgmHBOLygSU=");
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "BIZ UDMincho", serif;
-  background-color: transparent;
 }
 
 
@@ -525,12 +504,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /*===== Images=====*/
 
-.cardImage {
+/* .cardImage {
   max-width: 20%;
   max-height: 20%;
   position: relative;
 
-}
+} */
 
 
 /*======= loginPage===*/
@@ -574,7 +553,7 @@ form {
   display: grid;
   grid-gap: 10px;
   margin-top: 100px;
-  max-width: var(--width);
+  /* max-width: var(--width); */
   position: relative;
   /* margin: 30px auto; */
   padding: 90px;
@@ -601,9 +580,9 @@ form {
   cursor: pointer;
   /* font-family: "Georgia" */
   font-style: "Georgia";
-  font-size: 2rem;
+  font-size: 20px;
   border-radius: 0.5rem;
-  width: 10rem
+  width: 30% auto
   
 }
 
@@ -639,6 +618,14 @@ ul {
   color: black
 }
 
+.headerLoginStyle {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 75px;
+  font-family: cursive;
+  color: black
+}
+
 
 /* ########## MY EXPENSE ############### */
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
@@ -651,10 +638,10 @@ ul {
   box-sizing: border-box;
 } */
 
- .container {
+ /* .container {
   margin: 10px auto;
   width: 350px;
-}
+} */
 
 .h1expense {
   letter-spacing: 1px;
@@ -698,6 +685,7 @@ ul {
 .inc-exp-container > div {
   flex: 1;
   text-align: center;
+
 }
 
 .inc-exp-container > div:first-of-type {
@@ -778,14 +766,6 @@ input[type='number'] {
 .list li.minus {
   border-right: 5px solid #c0392b;
 }
-select {
-  margin-left: .5rem;
-}
-
-.select{
-  background-color:indigo;
-  color:#fff;
-}
 
 .delete-expense-btn {
   cursor: pointer;
@@ -813,8 +793,84 @@ transform: scale(1.05);
   opacity: 1;
 }
 
-@media (max-width: 320px) {
+/* /* @media (max-width: 100px) {
   .container {
-    width: 300px;
+    width: 100px;
+  } 
+}*/
+
+
+
+/* ################# YOLO ###################### */
+
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+  position: relative;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 350px auto 200px;
+    margin: "50px";
+    grid-template-areas:
+    "header  header  header"
+    "sidebar content content"
+    "footer  footer  footer";
+    background-color: #fff;
+    color: #444;
   }
+
+
+.box {
+  background-color: #FFF9EC;
+  color: black;
+  border-radius: 5px;
+  padding: 50px;
+  font-size:50%;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header,
+.footer {
+  background-color:whitesmoke;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: medium;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.topright {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

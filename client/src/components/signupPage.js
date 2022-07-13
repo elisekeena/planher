@@ -2,17 +2,16 @@ import { useState, useEffect } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 
 const inputStyles = {
-  padding: "10px",
-  border: "3px solid #9198e5",
+  padding: "6px",
+  border: "2px solid #309397",
   boxShadow: "0px 0px 0px",
-  color: "#3a46c2;",
-  font_size: "18px",
-  background_color: "#9198e5",
+  color: "#309397",
+  font_size: "10px",
+  background_color: "#309397",
   outline: "10px",
-  borderRadius: "10px",
-  width: "20%",
-  margin: "10px 0",
-
+  borderRadius: "5px",
+  width: "85%",
+  margin: "0px auto",
 };
 
 export default function SignupPage() {
@@ -72,11 +71,11 @@ export default function SignupPage() {
   }
 
   return (
-    <main style={{ padding: "1rem 0" }}>
-      <h2 >Signup Page</h2>
+    <main className="loginPage" style={{ padding: "1rem 0" }}>
       <form onSubmit={handleSubmit}>
+      <h2> Get Productive, Sign Up!</h2>
         <label className ="signupform" htmlFor="firstName"></label>
-        <input style ={inputStyles} 
+        <input  style ={inputStyles}
           type="text"
           id="firstName"
           name="firstName"
@@ -85,7 +84,7 @@ export default function SignupPage() {
           onChange={(e) => handleFormInput(e)}
         />
         <label htmlFor="lastName"></label>
-        <input style ={inputStyles} 
+        <input  style ={inputStyles}
           type="text"
           id="lastName"
           name="lastName"
@@ -94,7 +93,7 @@ export default function SignupPage() {
           onChange={(e) => handleFormInput(e)}
         />
         <label htmlFor="username"></label>
-        <input style ={inputStyles} 
+        <input  style ={inputStyles}
           type="text"
           id="username"
           name="username"
@@ -103,7 +102,7 @@ export default function SignupPage() {
           onChange={(e) => handleFormInput(e)}
         />
         <label htmlFor="password"></label>
-        <input style ={inputStyles} 
+        <input  style ={inputStyles}
           type="password"
           id="password"
           name="password"
@@ -111,17 +110,20 @@ export default function SignupPage() {
           placeholder="Password"
           onChange={(e) => handleFormInput(e)}
         />
-        <label htmlFor="passwordConfirmation"></label>
-        <input style ={inputStyles} 
+        {/* <label htmlFor="passwordConfirmation"></label>
+        <input  style ={inputStyles}
           type="password"
           id="passwordConfirmation"
           name="passwordConfirmation"
           placeholder="Confirm Password"
           value={formData.passwordConfirmation}
           onChange={(e) => handleFormInput(e)}
-        />
-        <button  type="submit" className= "submitbutton" >Submit</button>
+        /> */}
+        <button  type="submit" className= "loginbutton" >Submit</button>
         {errors ? <p>Error: {errors}</p> : null }
+        <button className= "loginbutton"  onClick={() => {
+          navigate("/login");
+        }}>Log In</button>
       </form>
     </main>
   );

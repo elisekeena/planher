@@ -16,15 +16,15 @@ export default function QuoteOfTheDayPage () {
       }, []);
     
 
-      return (
-        <div>
-        <div> Hello this is quote of the day page</div>
-    <h1>{quotes.q}</h1>
-    <h2>{quotes.a}</h2>
-        </div>
+    //   return (
+    //     <div>
+    //     <div> Hello, your quote of the day</div>
+    // <h1>{quotes.q}</h1>
+    // <h2>{quotes.a}</h2>
+    //     </div>
     
     
-      )
+    //   )
     
 
 

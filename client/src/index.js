@@ -27,7 +27,7 @@ ReactDOM.render(
           {/* <Route path="about" element={<About />} /> */}
           <Route path="toDoList" element={<ToDoListPage />} />
           <Route path="home" element={<HomePage />} />
-          <Route path="myEvents" element={<MyEventPage />} />
+          <Route path="myEvents/:id" element={<MyEventPage />} />
           <Route path="myExpenses" element={<MyExpensePage />} />
           <Route path="quoteOfTheDay" element={<QuoteOfTheDayPage />} />
           <Route

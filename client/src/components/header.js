@@ -21,7 +21,7 @@ export default function Header({ onLogout, user }) {
   return (
     <div>
       
-      <header
+      <header 
         // style={{
         //   borderBottom: "solid 1px",
         //   paddingBottom: "1rem",
@@ -39,7 +39,7 @@ export default function Header({ onLogout, user }) {
             <h1>< BiHomeHeart />    <span>Home</span></h1>
         </a>
 
-        <a id="about" className="menu-item" href="/about">About</a>
+        <a id="about" className="bm-item-list" href="/about">About</a>
         
         {/* <a onClick={ showSettings } className="menu-item--small" href="">Settings</a> */}
         {user ?<>
@@ -47,7 +47,7 @@ export default function Header({ onLogout, user }) {
           <h1>< VscChecklist />    <span>To Do</span></h1>
         </a>
         <br></br>
-        <a style={{textDecoration: 'none'}} id="myevents" className="bm-item-list" href={`/MyEvents?userId=${user.id}`}>
+        <a style={{textDecoration: 'none'}} id="myevents" className="bm-item-list" href={`/MyEvents/${user.id}`}>
         <h1>< BiCalendarHeart />   <span>Events</span></h1>
         </a>
         <br></br>
@@ -55,9 +55,9 @@ export default function Header({ onLogout, user }) {
         <h1>< RiMoneyDollarBoxLine />   <span>Expenses</span></h1>
         </a>
         <br></br>
-        <a id="logout" className="menu-item" href="/login" onClick={handleLogout}>Logout</a>
+        <a id="logout" className="bm-item-list" href="/login" onClick={handleLogout}>Logout</a>
         {" "}</> :
-         <a id="login" className="menu-item" href="/login">Login</a>}
+         <a id="login" className="bm-item-list" href="/login">Login</a>}
       </Menu>
 
       </header>

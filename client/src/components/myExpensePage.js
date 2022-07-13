@@ -2,13 +2,9 @@
 import React, { useState,useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { PieChart } from 'react-minimal-pie-chart';
+import { useOutletContext } from "react-router-dom";
 
 
-const arr = () => {
-  let data = localStorage.getItem("expense");
-  if (data) return JSON.parse(localStorage.getItem("expense"));
-  else return [];
-};
 
 
 const MyExpenses = () => {
@@ -19,18 +15,15 @@ const MyExpenses = () => {
   const [selected, setSelected] = useState(0);
   const [hovered, setHovered] = useState(undefined);
   const [code, setCode] = useState();
-  const [list, setList] = useState(arr);
+  
   const lineWidth = 60;
-
-useEffect(() => {
-    fetch("user_my_expenses/1")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data)
-     
-      });
-  }, []);
-
+  const [user, setUser] = useOutletContext();
+  const arr = () => {
+    let data = localStorage.getItem(`expense${user.id}`);
+    if (data) return JSON.parse(localStorage.getItem(`expense${user.id}`));
+    else return [];
+  };
+  const [list, setList] = useState(arr);
   // let newData = data.map((entry, i) => {
   //   if (hovered === i) {
   //     return {
@@ -57,7 +50,8 @@ useEffect(() => {
   };
 
   React.useEffect(() => {
-    localStorage.setItem("expense", JSON.stringify(list));
+    // localStorage.setItem("expense", JSON.stringify(list));
+    localStorage.setItem(`expense${user.id}`, JSON.stringify(list));
   }, [list]);
 
   const reducer = (accumulator, item) => {

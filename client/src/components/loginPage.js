@@ -2,17 +2,16 @@ import { useState, useEffect } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 
 const inputStyles = {
-  padding: "10px",
-  border: "3px solid #309397",
+  padding: "6px",
+  border: "2px solid #309397",
   boxShadow: "0px 0px 0px",
   color: "#309397",
-  font_size: "18px",
+  font_size: "10px",
   background_color: "#309397",
   outline: "10px",
-  borderRadius: "10px",
-  width: "50%",
-  margin: "10px 0",
-
+  borderRadius: "5px",
+  width: "85%",
+  margin: "0px auto",
 };
 
 export default function LoginPage() {
@@ -68,20 +67,18 @@ export default function LoginPage() {
 
   return (
     <main style={{ padding: "1rem 0" }}>
-      {/* <div className='buttons'>
-      <button style={{ backgroundColor: '#c3c4d3' }} onClick={() => {
-          navigate("/signup");
-        }}>Sign Up</button>
-      </div>
+      {/* <header className="headerLoginStyle"> planher
+          </header> */}
+    
 
-       */}
+      
       <div className="loginPage">
       <form id="form-login" onSubmit={handleSubmit}>
-      <h2>Welcome Back!</h2>
+        {/* <h2>Planher</h2> */}
+      <h3>Welcome Back to Planher!</h3>
 
-      <ul>
-    <li>
-      <span>
+    
+
     <label htmlFor="username">Username:</label>
         <input 
           style ={inputStyles}
@@ -90,11 +87,8 @@ export default function LoginPage() {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <br></br>
-        </span>
-    </li>
-    
-      </ul>
+        
+  
         <label htmlFor="password">Password:</label>
         <input
           style ={inputStyles}
@@ -103,9 +97,12 @@ export default function LoginPage() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <br></br>
-        <button type="submit" className= "loginbutton">Login</button>
+        
+        <button type="submit" className= "loginbutton">Log In</button>
         {error ? <p>Error: {error}</p> : null }
+        <button className= "loginbutton"  onClick={() => {
+          navigate("/signup");
+        }}>Sign Up</button>
       </form>
     </div>
     </main>
