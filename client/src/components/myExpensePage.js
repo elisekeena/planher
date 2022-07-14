@@ -128,7 +128,7 @@ const MyExpenses = () => {
                 <span>{code}{(item.amount)}</span>
                 <button
                   onClick={() => deleteItem(item.id)}
-                  className="delete-btn"
+                  className="popUpButtonNo"
                 > Delete
                   <i className="fa fa-trash"></i>
                 </button>

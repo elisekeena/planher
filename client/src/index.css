@@ -1,16 +1,4 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
 /* ========================= TO DO PAGE ====================================== */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
 
@@ -448,6 +436,8 @@ code {
   margin-top: 10px;
 }
 
+
+
 /* ========================= BURGER STYLE MENU ====================================== */
 
 /* Position and sizing of burger button */
@@ -527,15 +517,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgba(0, 0, 0, 0.3);
 }
 
-/*===== Images=====*/
-
-/* .cardImage {
-  max-width: 20%;
-  max-height: 20%;
-  position: relative;
-
-} */
-
 
 /*======= loginPage===*/
 .loginPage {
@@ -587,14 +568,6 @@ form {
   box-shadow: 0 32px 64px rgba(0,0,0,0.2);
  
 }
-/* fieldset {
-  margin: 0;
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-} */
-
 
 .loginbutton {
   margin-top: 2rem;
@@ -654,19 +627,6 @@ ul {
 
 /* ########## MY EXPENSE ############### */
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
-/* :root {
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-* {
-  box-sizing: border-box;
-} */
-
- /* .container {
-  margin: 10px auto;
-  width: 350px;
-} */
 
 .h1expense {
   letter-spacing: 1px;
@@ -793,7 +753,8 @@ input[type='number'] {
   border-right: 5px solid #c0392b;
 }
 
-.delete-expense-btn {
+
+/* .delete-expense-btn {
   cursor: pointer;
   border: 5px;
   font-size: 20px;
@@ -805,13 +766,13 @@ input[type='number'] {
   transform: translate(-100%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease;
-  color: #fff;
+  color: #fff !important;
   background-color: #E46472 !important;
   border-color: #000000!important;
   border-width: 1.5px;
-  border-radius: 5px;
+  border-radius: 5px!important;
   margin-top: 10px;
-}
+} */
 .delete-expense-btn:hover{
 transform: scale(1.05);
 }
@@ -832,15 +793,22 @@ transform: scale(1.05);
 
 .sidebar {
   grid-area: sidebar;
+  border-top: 10px solid #ffffff;
+  border-left: 10px solid #ffffff;
+  border-bottom: 10px solid #ffffff;
+  border-radius: 20px !important;
 }
 
 .content {
   grid-area: content;
   position: relative;
+  
 }
 
 .header {
   grid-area: content;
+  border: 10px solid #ffffff;
+  
 }
 
 .footer {
@@ -849,26 +817,28 @@ transform: scale(1.05);
 
 .wrapper {
     display: grid;
-    grid-gap: 10px;
+    /* grid-gap: 10px; */
     grid-template-columns: 350px auto 200px;
     margin: "50px";
     grid-template-areas:
-    "header  content  content"
+    "sidebar  content  content"
     "sidebar content content"
     "footer  footer  footer";
     background-color: #fff;
     color: #444;
     flex-wrap: inherit;
+    
   }
 
 
 .box {
   background-color: #FFF9EC;
   color: black;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   padding: 50px;
   font-size:50%;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
 }
 
 .header{
@@ -877,6 +847,7 @@ transform: scale(1.05);
   border-radius: 5px;
   padding: 50px;
   font-size:50%;
+  border-radius: 20px;
 }
 
 .footer {

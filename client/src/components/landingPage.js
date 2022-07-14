@@ -21,7 +21,7 @@ export default function LandingPage(user) {
       }}>
           <Link style={{textDecoration: 'none'}} to="/">
           <header className="headerStyle"> planher
-          <h3 className="tagline"> Get productive!</h3>
+          <h3> Get productive!</h3>
           </header>
         </Link>
         </div>

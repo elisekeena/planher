@@ -115,24 +115,24 @@ export default class MyEventPage extends React.Component {
                 ))}
               </h1>
               <br></br>
-              <li> Plans are nothing; planning is everything  </li>
-              <br></br>
-              <li>Be inspired, get productive!</li>
+              <li style={{ fontStyle:"bold", fontSize:"20px" }}> Plans are nothing; planning is everything  </li>
+              <li style={{ fontStyle:"bold", fontSize:"20px" }}>Be inspired, get productive!</li>
               {/* <li>Click an event to delete it</li> */}
         
           </div>
           <div className='demo-app-sidebar-section'>
-            <label>
+            <label >
               <input
                 type='checkbox'
                 checked={this.state.weekendsVisible}
                 onChange={this.handleWeekendsToggle}
+                style={{ color:"gold"}}
               ></input>
               toggle weekends
             </label>
           </div>
           <div className='demo-app-sidebar-section'>
-            <h2 className="bm-item-list">All Events ({this.state.currentEvents.length})</h2>
+            <h2 style={{ fontStyle:"bold", color: "#309397" }}>All Events ({this.state.currentEvents.length})</h2>
             <ul>
               {this.state.currentEvents.map(renderSidebarEvent)}
             </ul>
