@@ -25,9 +25,6 @@ body {
   font-family: 'Mulish', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: rgb(184, 210, 161); */
-  /* background-color:#FFF9EC!important;  */
-  /* background-image: url("https://img.freepik.com/premium-photo/eucalyptus-leaves-white-background-flat-lay-top-view-copy-space_102752-779.jpg?w=2000"); */
   background-image: url("https://www.designerblogs.com/wp-content/uploads/2020/09/planner-page-header-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,7 +79,7 @@ code {
   max-width: var(--width);
   background: #FFF9EC;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 5px 5px;
   box-shadow:
   6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
   22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
@@ -103,7 +100,7 @@ code {
 
 .add-task{
   position: relative;
-  margin: 30px auto;
+  margin: 20px auto;
   max-width: var(--width);
   background: #FFF9EC;
   border-radius: 10px;
@@ -127,7 +124,7 @@ code {
 }
 
 .add-task h1{
-  margin: 10px 15px;
+  margin: 5px 5px;
   padding-left: 10px;
   font-weight: 700;
 }
@@ -161,6 +158,7 @@ code {
   padding: 5px 15px;
   max-width: 400px;
   max-height: 200px;
+  margin: auto
 }
 
 .add-task .task-options button{
@@ -267,7 +265,7 @@ code {
 .tasks-list .task .completed{
   background: var(--color);
   position: absolute;
-  top: -21px;
+  top: -34px;
   left: -1px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -359,6 +357,13 @@ code {
   background: #E46472;
   color: var(--fc-event-text-color, #fff);
 }
+.fc-timegrid-event .fc-event-main {
+  background: #E46472;
+  color: var(--fc-event-text-color, #fff);
+  opacity: 100%;
+}
+
+
 /*======= myEventPage===*/
 
 #calendar {
@@ -415,6 +420,7 @@ code {
     border-radius: 20px;
     outline: #309397 3px solid;
 }
+
 .popUpButtonNo{
   color: #fff;
   background-color: #E46472 !important;
@@ -461,7 +467,7 @@ code {
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: #E46472;
 }
 
 /*
@@ -470,26 +476,35 @@ Note: Beware of modifying this element as it can break the animations - you shou
 */
 .bm-menu-wrap {
   position: fixed;
-  height: 100%;
+  height: 50%;
 }
 
 /* General sidebar styles */
 .bm-menu {
   background: #e3edd9;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  padding: 4.5em 1.5em 0;
+  font-size: .50em;
   overflow: hidden !important;
+
+}
+.bm-menu h1 {
+  font-size: 1.55rem;
+  text-align: center;
 }
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #d9e8ca;
+  fill: #e3edd9;
 }
 
 /* Wrapper for item list */
 .bm-item-list {
+  color: rgb(67, 66, 66);
+  padding: 0.5em;
+}
+.bm-item-list:hover {
   color: #309397;
-  padding: 0.8em;
+  
 }
 
 /* Individual item */
@@ -540,12 +555,12 @@ form {
   margin-top: 100px;
   max-width: var(--width);
   position: relative;
-  margin: 30px auto;
-  padding: 90px;
+  margin: 20px auto;
+  padding: 50px;
   background-color: #FFF9EC;
   border-radius: 10px;
   box-shadow: 0 32px 64px rgba(0,0,0,0.2);
- 
+  
 }
 #form-login {
   grid-column: 2;
@@ -675,8 +690,8 @@ ul {
   justify-content: space-between;
   max-width: var(--width);
   position: relative;
-  margin: 30px auto;
-  padding: 50px;
+  margin: 20px auto;
+  padding: 30px;
   border: 1px solid #309397;
   border-radius: 5px;
   border-width: 5px;
@@ -708,7 +723,7 @@ ul {
 
 label {
   display: inline-block;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 input[type='text'],
@@ -718,8 +733,9 @@ input[type='number'] {
   display: block;
   font-size: 16px;
   padding: 10px;
-  width: 50%;
-  margin:0 auto
+  width: 30%;
+  margin:0 auto;
+
 }
 
 .btnExpense {
@@ -814,7 +830,7 @@ transform: scale(1.05);
 }
 
 .header {
-  grid-area: header;
+  grid-area: content;
 }
 
 .footer {
@@ -827,11 +843,12 @@ transform: scale(1.05);
     grid-template-columns: 350px auto 200px;
     margin: "50px";
     grid-template-areas:
-    "header  header  header"
+    "header  content  content"
     "sidebar content content"
     "footer  footer  footer";
     background-color: #fff;
     color: #444;
+    flex-wrap: inherit;
   }
 
 
@@ -844,7 +861,14 @@ transform: scale(1.05);
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.header,
+.header{
+  background-image: url("https://i.pinimg.com/originals/be/2a/94/be2a940c4ac312bf5abc0aa9677749de.jpg");
+  color: black;
+  border-radius: 5px;
+  padding: 50px;
+  font-size:50%;
+}
+
 .footer {
   background-color:whitesmoke;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -874,3 +898,4 @@ transform: scale(1.05);
   bottom: 0;
   right: 0;
 }
+

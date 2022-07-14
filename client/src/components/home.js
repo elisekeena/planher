@@ -24,6 +24,7 @@ export default function HomePage() {
       }
   }, []);
 
+
   function renderSidebarEvent(event) {
     return (
       <li key={event.id}>
@@ -34,11 +35,11 @@ export default function HomePage() {
   }
 
 
-  return (<div className="wrapper">
+  return (<div className="wrapper" >
   <div className="box sidebar">
     {user !== null ? <div style={{ fontSize: "60%"}}>
       <h2>
-      <a href={`/MyEvents/${user.id}`}> All Events ({events.length}) </a> </h2>
+      <a className="bm-item-list" style={{textDecoration: 'none'}} href={`/MyEvents/${user.id}`}> All Events ({events.length}) </a> </h2>
       <ul>
         {events.map(renderSidebarEvent)}
       </ul>
@@ -46,16 +47,19 @@ export default function HomePage() {
     <div>No event </div> }
     
     </div>
-  <div className="box content"> Hello, {user !== null ? user.first_name : "There"}
+  <div className="box header"> Hello, {user !== null ? user.first_name : "There"}
+  <br></br>
     <main style={{ padding: "1rem 0" }}>
-      
-       <div id="home" className='bodybackground'>
+       <div style={{display:"flex",justifyContent:"center"}} id="home" className='bodybackground'>
          <h1> {new Date().toLocaleString() + ""}</h1>
          <br/>
+         <div style={{ paddingLeft: "80px"}}>
          <h2>{quotes.q}</h2>
-           <h5>{quotes.a}</h5>
+         <div style={{flexDirection:"column",justifyContent:"center"}}> <h5>{quotes.a}</h5> </div>
+         </div>
            {/* <img src={"https://i.pinimg.com/originals/cb/83/ea/cb83ea01181d031162d777be8d8f780f.gif"} /> */}
-           </div>
+      </div>
+      
      </main>
     {/* <br /> The four arrows are inline images inside the content area.
     <img src="http://gridbyexample.com/examples/code/arrow-top-left.png" alt="top left" class="topleft" />
@@ -66,5 +70,6 @@ export default function HomePage() {
 </div>
 <div className="box footer">© 2022 planher</div>
 </div>
+
   )
 }

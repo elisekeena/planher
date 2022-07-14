@@ -10,7 +10,8 @@ import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { useParams } from 'react-router-dom';
-
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 let eventGuid = 0
 let todayStr = new Date().toISOString().replace(/T.*$/, '') // YYYY-MM-DD of today
@@ -47,9 +48,10 @@ export default class MyEventPage extends React.Component {
       weekendsVisible: true,
       currentEvents: [],
       events: [],
-      selectedInfo: null
+      selectedInfo: null,
     };
   }
+
 
   // componentDidMount() {
   //       fetch("my_events/"+1)
@@ -98,6 +100,7 @@ export default class MyEventPage extends React.Component {
       )
     }
   
+
     renderSidebar() {
       return (
         <div className='demo-app-sidebar'>
@@ -105,16 +108,18 @@ export default class MyEventPage extends React.Component {
             <br></br>
             <br></br>
             <br></br>
-            <h2>Instructions</h2>
+            <div style={{image:"https://i.pinimg.com/originals/cb/83/ea/cb83ea01181d031162d777be8d8f780f.gif"}}></div>
+            <h2>Planher</h2>
             <h1>{this.state.events.map(({ ad,end,id,start,title,uid }) => (
                 <p key={id}> {title}</p>
                 ))}
               </h1>
-            <ul>
-              <li>Select dates and you will be prompted to create a new event</li>
-              <li>Drag, drop, and resize events</li>
-              <li>Click an event to delete it</li>
-            </ul>
+              <br></br>
+              <li> Plans are nothing; planning is everything  </li>
+              <br></br>
+              <li>Be inspired, get productive!</li>
+              {/* <li>Click an event to delete it</li> */}
+        
           </div>
           <div className='demo-app-sidebar-section'>
             <label>
@@ -127,7 +132,7 @@ export default class MyEventPage extends React.Component {
             </label>
           </div>
           <div className='demo-app-sidebar-section'>
-            <h2>All Events ({this.state.currentEvents.length})</h2>
+            <h2 className="bm-item-list">All Events ({this.state.currentEvents.length})</h2>
             <ul>
               {this.state.currentEvents.map(renderSidebarEvent)}
             </ul>
@@ -137,6 +142,7 @@ export default class MyEventPage extends React.Component {
     }
   
     handleWeekendsToggle = () => {
+      // this.state.weekendsVisible = !this.state.weekendsVisible
       this.setState({
         weekendsVisible: !this.state.weekendsVisible
       })

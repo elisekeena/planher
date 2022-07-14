@@ -14,19 +14,5 @@ export default function QuoteOfTheDayPage () {
             setMyQuotes(data[0]);
         })
       }, []);
-    
-
-    //   return (
-    //     <div>
-    //     <div> Hello, your quote of the day</div>
-    // <h1>{quotes.q}</h1>
-    // <h2>{quotes.a}</h2>
-    //     </div>
-    
-    
-    //   )
-    
-
-
 
 }
