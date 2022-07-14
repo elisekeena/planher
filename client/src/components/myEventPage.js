@@ -109,7 +109,7 @@ export default class MyEventPage extends React.Component {
             <br></br>
             <br></br>
             <div style={{image:"https://i.pinimg.com/originals/cb/83/ea/cb83ea01181d031162d777be8d8f780f.gif"}}></div>
-            <h2>Planher</h2>
+            <h2 style={{ fontStyle:"italic", fontFamily:"cursive", fontSize:"45px" }}>Planher</h2>
             <h1>{this.state.events.map(({ ad,end,id,start,title,uid }) => (
                 <p key={id}> {title}</p>
                 ))}

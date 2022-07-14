@@ -39,7 +39,7 @@ export default function Header({ onLogout, user }) {
         </a>
         <br></br>
         <a style={{textDecoration: 'none'}} id="myevents" className="bm-item-list" href={`/MyEvents/${user.id}`}>
-        <h1>< BiCalendarHeart />   <span>Events</span></h1>
+        <h1>< BiCalendarHeart />   <span>Calendar</span></h1>
         </a>
         <br></br>
         <a style={{textDecoration: 'none'}} id="myExpenses" className="bm-item-list" href={`/myExpenses`}>

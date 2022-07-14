@@ -49,6 +49,7 @@ export default function HomePage() {
     </div>
   <div className="box header"> Hello, {user !== null ? user.first_name : "There"}
   <br></br>
+  <h2>Let's get planning</h2>
     <main style={{ padding: "1rem 0" }}>
        <div style={{display:"flex",justifyContent:"center"}} id="home" className='bodybackground'>
          <h1> {new Date().toLocaleString() + ""}</h1>
@@ -61,11 +62,6 @@ export default function HomePage() {
       </div>
       
      </main>
-    {/* <br /> The four arrows are inline images inside the content area.
-    <img src="http://gridbyexample.com/examples/code/arrow-top-left.png" alt="top left" class="topleft" />
-    <img src="http://gridbyexample.com/examples/code/arrow-top-right.png" alt="top right" class="topright" />
-    <img src="http://gridbyexample.com/examples/code/arrow-bottom-left.png" alt="bottom left" class="bottomleft" />
-    <img src="http://gridbyexample.com/examples/code/arrow-bottom-right.png" alt="bottom right" class="bottomright" /></div> */}
   
 </div>
 <div className="box footer">© 2022 planher</div>
