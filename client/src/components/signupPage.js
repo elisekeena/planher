@@ -30,8 +30,9 @@ export default function SignupPage() {
 
   useEffect(() => {
     if (user) {
-      // console.log("navigating to homepage")
-      navigate("/");
+      setUser()
+      console.log("navigating to homepage")
+      navigate("/login");
     }
   }, [user]);
 

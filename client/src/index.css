@@ -19,7 +19,6 @@ code {
   --width: 700px;
 }
 
-
 body {
   margin: 0;
   font-family: 'Mulish', sans-serif;
@@ -188,6 +187,16 @@ code {
 	flex: 1 5 auto;
 	align-self: auto;
 }
+.tasks-list .task input[type="text"]{
+  border: 1px solid #FFD700;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  position: center;
+  margin: 0 auto
+}
+
 
 .tasks-list .task input[type="text"], .tasks-list .task textarea{
   outline: none;
@@ -198,8 +207,9 @@ code {
   padding: 5px 15px;
   max-width: 150px;
   max-height: 100px;
-  margin: 5px 0px;
+
 }
+
 
 .tasks-list .task-container{
   margin: 10px 20px;

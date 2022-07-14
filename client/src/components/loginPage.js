@@ -75,7 +75,7 @@ export default function LoginPage() {
       <div className="loginPage">
       <form id="form-login" onSubmit={handleSubmit}>
         {/* <h2>Planher</h2> */}
-      <h3>Welcome Back to Planher!</h3>
+      <h3>Welcome to Planher!</h3>
 
     
 
